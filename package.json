@@ -14,7 +14,11 @@
     "lint": "eslint --ext .js --ext .jsx client/",
     "start": "cross-env NODE_ENV=production node server/server.js"
   },
-
+  "husky": {
+    "hooks": {
+      "pre-commit": "client \"src/**/*.{js,jsx}\" | snazzy"
+    }
+  },
   "author": "dawn",
   "license": "ISC",
   "dependencies": {
@@ -38,6 +42,7 @@
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "react-router-dom": "^4.3.1",
+    "react-swipeable-views": "^0.13.0",
     "serialize-javascript": "^1.5.0",
     "serve-favicon": "^2.5.0"
   },
